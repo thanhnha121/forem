@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_21_033646) do
+ActiveRecord::Schema.define(version: 2020_12_22_070116) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "citext"
@@ -855,6 +855,7 @@ ActiveRecord::Schema.define(version: 2020_12_21_033646) do
     t.bigint "searchable_id"
     t.string "searchable_type"
     t.datetime "updated_at", precision: 6, null: false
+    t.index "to_tsvector('simple'::regconfig, COALESCE(content, ''::text))", name: "index_pg_search_documents_on_content", using: :gin
     t.index ["searchable_type", "searchable_id"], name: "index_pg_search_documents_on_searchable_type_and_searchable_id"
   end
 
