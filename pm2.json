@@ -1,0 +1,1 @@
+{     "script": "bin/startup",     "ignore_watch": [],     "watch_options": {         "followSymlinks": false     },     "name": "www.sysover.guru" }
