@@ -1,6 +1,8 @@
+<<<<<<< HEAD
 require 'dotenv'
 Dotenv.load
-require 'faker'
+
+return if Rails.env.production?
 
 # NOTE: when adding new data, please use this class to ensure the seed tasks
 # stays idempotent.

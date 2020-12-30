@@ -22,6 +22,11 @@ Rails.application.config.content_security_policy do |policy|
     # webpack_host = "#{ApplicationConfig.app_domain_no_port}"
     # policy.connect_src :self, :https, :unsafe_inline, "*.pusher.com"
   # end
+  # if Rails.env.development?
+  #   webpack_host = "#{ApplicationConfig.app_domain_no_port}:3035"
+  #   policy.connect_src :self, :https,
+  #                      "http://#{webpack_host}", "ws://#{webpack_host}"
+  # end
 end
 
 # If you are using UJS then enable automatic nonce generation
