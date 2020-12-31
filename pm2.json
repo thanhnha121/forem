@@ -1,1 +1,7 @@
-{     "script": "bin/startup",     "ignore_watch": [],     "watch_options": {         "followSymlinks": false     },     "name": "www.sysover.guru" }
+{
+  "name": "www.sysover.guru",
+  "script": "bin/startup",
+  "exec_interpreter": "ruby",
+  "exec_mode": "fork_mode",
+  "max_memory_restart": "512M"
+}
