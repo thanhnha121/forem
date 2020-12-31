@@ -467,9 +467,10 @@ export default class Chat extends Component {
     const receivedChatChannelId = message.chat_channel_id;
     const messageList = document.getElementById('messagelist');
     let newMessages = [];
-    const nearBottom =
-      messageList.scrollTop + messageList.offsetHeight + 400 >
-      messageList.scrollHeight;
+    const nearBottom = messageList
+      ? messageList.scrollTop + messageList.offsetHeight + 400 >
+        messageList.scrollHeight
+      : 0;
 
     if (nearBottom) {
       scrollToBottom();
@@ -1066,12 +1067,16 @@ export default class Chat extends Component {
     const { activeChannelId } = this.state;
     this.setActiveContentState(activeChannelId, response);
     setTimeout(() => {
-      document.getElementById('chat_activecontent').scrollTop = 0;
-      document.getElementById('chat').scrollLeft = 1000;
+      const tmp = document.getElementById('chat_activecontent');
+      if (tmp) tmp.scrollTop = 0;
+      const chatE = document.getElementById('chat');
+      if (chatE) chatE.scrollLeft = 1000;
     }, 3);
     setTimeout(() => {
-      document.getElementById('chat_activecontent').scrollTop = 0;
-      document.getElementById('chat').scrollLeft = 1000;
+      const tmp = document.getElementById('chat_activecontent');
+      if (tmp) tmp.scrollTop = 0;
+      const chatE = document.getElementById('chat');
+      if (chatE) chatE.scrollLeft = 1000;
     }, 10);
   };
 

@@ -45,7 +45,7 @@ export function getUserDataAndCsrfToken() {
 
 export function scrollToBottom() {
   const element = document.getElementById('messagelist');
-  element.scrollTop = element.scrollHeight;
+  if (element) element.scrollTop = element.scrollHeight;
 }
 
 export function setupObserver(callback) {
