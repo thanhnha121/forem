@@ -55,6 +55,7 @@ development:
 
   extract_css: true
   mode: "production"
+  compile: true
 
   # Reference: https://webpack.js.org/configuration/dev-server/
   dev_server:
