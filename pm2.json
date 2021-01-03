@@ -1,6 +1,6 @@
 {
   "name": "www.sysover.guru",
-  "script": "bin/startup",
+  "script": "NODE_ENV=development bin/startup",
   "exec_interpreter": "ruby",
   "exec_mode": "fork_mode",
   "max_memory_restart": "512M"
