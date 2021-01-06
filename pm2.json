@@ -3,7 +3,7 @@
   "script": "bin/startup",
   "exec_interpreter": "ruby",
   "exec_mode": "fork_mode",
-  "max_memory_restart": "512M",
+  "max_memory_restart": "2G",
   "env": {
     "NODE_ENV": "development"
   }
